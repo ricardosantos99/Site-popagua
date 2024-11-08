@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema Contas a Pagar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+        <img src="logo.png" alt="Imagem do logotipo da empresa"> 
+
+    <nav class="menu-navegacao">
+	    <a href="index.html">Inicio</a>
+		<a href="contato.html">Contato</a>
+        <a href="produtos.html">Produtos</a>
+		<a href="servico.html">Serviços</a>
+    </nav>		
+<body>
+ 			
+        <h1>ÁREA DO COLABORADOR</h1>
+
+    <!-- Botão para abrir a Área do Colaborador -->
+    <button id="openLoginModal">LOGIN</button>
+
+    <!-- Modal de Login -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login - Área do Colaborador</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Usuário">
+                <input type="password" id="password" placeholder="Senha">
+                <button type="submit">Entrar</button>
+            </form>
+            <p id="errorMessage" style="color: red;"></p>
+        </div>
+    </div>
+
+    <script>
+        // Código para manipular o modal
+        const modal = document.getElementById("loginModal");
+        const btn = document.getElementById("openLoginModal");
+        const span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Código de autenticação
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            if (username === "admin" && password === "12345") {
+                window.location.href = "sistema.html";
+            } else {
+                document.getElementById("errorMessage").innerText = "Usuário ou senha incorretos!";
+            }
+        });
+    </script>
+</body>
+</html>

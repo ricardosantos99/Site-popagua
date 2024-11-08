@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Lançamentos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="table-container">
+        <h2>Lançamentos de Notas</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Data do Documento</th>
+                    <th>Data de Vencimento</th>
+                    <th>Valor Total</th>
+                    <th>Fornecedor</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaNotas"></tbody>
+        </table>
+		<br></br>
+        <a href="lancamentos.html">Lançar nova Nota</a>
+		<br></br>
+		<a href="sistema.html">Voltar ao inicio</a>
+    </div>
+
+    <script>
+        function carregarNotas() {
+            const notas = JSON.parse(localStorage.getItem("notas")) || [];
+            const tabela = document.getElementById("tabelaNotas");
+            tabela.innerHTML = "";
+
+            notas.forEach((nota, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${nota.dataDocumento}</td>
+                    <td>${nota.dataVencimento}</td>
+                    <td>${nota.valorTotal}</td>
+                    <td>${nota.fornecedor}</td>
+                    <td>
+                        <button onclick="editarNota(${index})">Editar</button>
+                        <button onclick="excluirNota(${index})">Excluir</button>
+                        <button onclick="pagarNota(${index})">Pago</button>
+                    </td>
+                `;
+                tabela.appendChild(row);
+            });
+        }
+
+        function editarNota(index) {
+            const notas = JSON.parse(localStorage.getItem("notas"));
+            const nota = notas[index];
+            const dataDocumento = prompt("Data do Documento:", nota.dataDocumento);
+            const dataVencimento = prompt("Data de Vencimento:", nota.dataVencimento);
+            const valorTotal = prompt("Valor Total:", nota.valorTotal);
+            const fornecedor = prompt("Fornecedor:", nota.fornecedor);
+
+            if (dataDocumento && dataVencimento && valorTotal && fornecedor) {
+                notas[index] = { dataDocumento, dataVencimento, valorTotal, fornecedor };
+                localStorage.setItem("notas", JSON.stringify(notas));
+                carregarNotas();
+            }
+        }
+
+        function excluirNota(index) {
+            let notas = JSON.parse(localStorage.getItem("notas"));
+            notas.splice(index, 1);
+            localStorage.setItem("notas", JSON.stringify(notas));
+            carregarNotas();
+        }
+
+        function pagarNota(index) {
+            excluirNota(index);
+            alert("Nota marcada como paga e removida da lista.");
+        }
+
+        document.addEventListener("DOMContentLoaded", carregarNotas);
+    </script>
+</body>
+</html>

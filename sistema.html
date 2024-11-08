@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Colaborador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+           <img src="logo.png" alt="Imagem do logotipo da empresa">
+
+
+		   			        <h1>CONTAS A PAGAR</h1>
+
+<body>
+    <div class="dashboard-container">
+
+        <div class="button-container">
+            <button id="lancarNota">Lançar Nota</button>
+            <button id="visualizarNotas">Visualizar Notas</button>
+			<button id="tabelaLancadas">Visualizar Notas Pagas</button>
+            <button id="sair">Sair</button>
+        </div>
+    </div>
+
+    <script>
+        // Redirecionar para a página de lançar nota
+        document.getElementById("lancarNota").addEventListener("click", function() {
+            window.location.href = "lancamentos.html";
+        });
+
+        // Redirecionar para a página de visualizar notas
+        document.getElementById("visualizarNotas").addEventListener("click", function() {
+            window.location.href = "tabela.html";
+        });
+		
+		// Redirecionar para a página de visualizar notas
+        document.getElementById("tabelaLancadas").addEventListener("click", function() {
+            window.location.href = "tabelaLancadas.html";
+        });
+
+        // Sair e voltar para a página inicial do site
+        document.getElementById("sair").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+		
+        function mostrarDataAtual() {
+            const dataAtual = new Date();
+            const opcoes = { 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric', 
+                weekday: 'long'
+            };
+            const dataFormatada = dataAtual.toLocaleDateString('pt-BR', opcoes);
+            document.getElementById('dateContainer').innerText = dataFormatada;
+        }
+
+        // Chama a função para mostrar a data ao carregar a página
+        mostrarDataAtual();
+    </script>
+</body>
+</html>

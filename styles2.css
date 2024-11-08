@@ -1,0 +1,103 @@
+/* Reset básico para margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Fonte padrão */
+    background-color: #e9f5ff; /* Fundo claro */
+    color: #333; /* Cor do texto */
+}
+
+/* Estilo para o logo */
+.imagem-loja {
+    display: block;
+    margin: 20px auto; /* Centraliza a imagem */
+    max-width: 100%; /* Responsividade */
+    height: auto; /* Mantém a proporção */
+}
+
+/* Estilo do menu de navegação */
+.menu-navegacao {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    background-color: #005aad;
+    padding: 15px;
+}
+
+.menu-navegacao a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 60px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+
+.menu-navegacao a:hover {
+    background-color: #0066cc; 
+    transform: scale(1.1); 
+}
+
+
+.menu-navegacao a:active {
+    background-color: #003366;
+    transform: scale(1.05);
+}
+
+/* Estilo da seção sobre */
+.about {
+    text-align: center;
+    padding: 40px;
+    background-color: white; /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    margin: 20px; /* Margem em torno da seção */
+}
+
+.about h1 {
+    color: #004aad; /* Cor do título */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.about p {
+    line-height: 1.6; /* Melhora a legibilidade */
+    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+}
+
+/* Botão "Conheça nossos produtos" */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008cba; /* Cor do botão */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+    background-color: #006f9a; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Efeito de aumento */
+}
+
+		.whatsapp-button {
+        position: fixed;
+        bottom: 20px; 
+        right: 20px;  
+        width: 50px;  
+        height: 50px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000; 
+		}
+		
+		 .whatsapp-button img {
+        width: 100%;  
+        height: auto; 
+		}

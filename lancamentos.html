@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lançamentos de Notas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Lançar Nota</h2>
+        <form id="notaForm">
+            <label for="dataDocumento">Data do Documento</label>
+            <input type="date" id="dataDocumento" required>
+            
+            <label for="dataVencimento">Data de Vencimento</label>
+            <input type="date" id="dataVencimento" required>
+            
+            <label for="valorTotal">Valor Total</label>
+            <input type="number" step="0.01" id="valorTotal" placeholder="Valor Total" required>
+            
+            <label for="fornecedor">Fornecedor</label>
+            <input type="text" id="fornecedor" placeholder="Fornecedor" required>
+            
+            <button type="submit">Lançar Nota</button>
+			
+
+		
+		</form>
+
+
+    </div>
+			<br></br>
+			<a href="tabela.html">Notas Lançadas</a>
+			<br></br>
+			<a href="sistema.html">Voltar ao inicio</a>
+    <script>
+        // Armazenar nota ao clicar em "Lançar Nota"
+        document.getElementById("notaForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const dataDocumento = document.getElementById("dataDocumento").value;
+            const dataVencimento = document.getElementById("dataVencimento").value;
+            const valorTotal = document.getElementById("valorTotal").value;
+            const fornecedor = document.getElementById("fornecedor").value;
+
+            const nota = {
+                dataDocumento,
+                dataVencimento,
+                valorTotal,
+                fornecedor
+            };
+
+            let notas = JSON.parse(localStorage.getItem("notas")) || [];
+            notas.push(nota);
+            localStorage.setItem("notas", JSON.stringify(notas));
+
+            alert("Nota lançada com sucesso!");
+            document.getElementById("notaForm").reset();
+        });
+
+        // Armazenar nota como "nota lançada"
+        document.getElementById("notaLancadaBtn").addEventListener("click", function() {
+            const dataDocumento = document.getElementById("dataDocumento").value;
+            const dataVencimento = document.getElementById("dataVencimento").value;
+            const valorTotal = document.getElementById("valorTotal").value;
+            const fornecedor = document.getElementById("fornecedor").value;
+
+            if (dataDocumento && dataVencimento && valorTotal && fornecedor) {
+                const notaLancada = {
+                    dataDocumento,
+                    dataVencimento,
+                    valorTotal,
+                    fornecedor
+                };
+
+                let notasLancadas = JSON.parse(localStorage.getItem("notasLancadas")) || [];
+                notasLancadas.push(notaLancada);
+                localStorage.setItem("notasLancadas", JSON.stringify(notasLancadas));
+
+                alert("Nota movida para 'Notas Lançadas' com sucesso!");
+                document.getElementById("notaForm").reset();
+            } else {
+                alert("Por favor, preencha todos os campos antes de lançar a nota.");
+            }
+        });
+    </script>
+</body>
+</html>
