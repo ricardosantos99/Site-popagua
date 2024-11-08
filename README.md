@@ -28,6 +28,11 @@ Este é um sistema desenvolvido para gerenciar contas a pagar de uma loja de ág
 - **Controle de Acesso**: Autenticação de colaboradores para a área restrita.
 - **Consulta de Histórico**: Visualização de contas quitadas e pendentes.
 
+
+---
+
+### Link do video de apresentação do projeto: 
+
 ---
 
 ### Ricardo Frugolli dos Santos Filho
