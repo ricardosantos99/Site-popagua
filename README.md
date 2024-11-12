@@ -17,6 +17,10 @@ Este é um sistema desenvolvido para gerenciar contas a pagar de uma loja de ág
 ---
 
 ### 💻 Tecnologias Utilizadas
+
+- - **Login:** admin
+- - **Senha:** 12345
+
 - **HTML / CSS / JavaScript**: Para a construção da interface do usuário.
 - **Azure DevOps**: Gerenciamento do projeto (Epics, Features, User Stories, etc.).
 - **GitHub**: Versionamento do código.
