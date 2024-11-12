@@ -41,5 +41,5 @@ Este é um sistema desenvolvido para gerenciar contas a pagar de uma loja de ág
 
 ### Ricardo Frugolli dos Santos Filho
 ### RA: 3019103085
-### Ciencia da computaçao - Uni VP - Noturno
+### Ciencia da computaçao - Uninove VP - Noturno
 ### PROJETO EM GESTAO DE SISTEMAS COMPUTACIONAIS
