@@ -18,8 +18,8 @@ Este é um sistema desenvolvido para gerenciar contas a pagar de uma loja de ág
 
 ### 💻 Tecnologias Utilizadas
 
-- - **Login:** admin
-- - **Senha:** 12345
+- **Login:** admin
+- **Senha:** 12345
 
 - **HTML / CSS / JavaScript**: Para a construção da interface do usuário.
 - **Azure DevOps**: Gerenciamento do projeto (Epics, Features, User Stories, etc.).
@@ -36,7 +36,8 @@ Este é um sistema desenvolvido para gerenciar contas a pagar de uma loja de ág
 ---
 
 ### Link do video de apresentação do projeto: 
-
+### Link da hospedagem: https://comfy-capybara-5a4184.netlify.app/
+### Link do azure devops: https://dev.azure.com/ricardosantos410/Projeto%20Uni9%20(Pop%20%C3%81gua)
 ---
 
 ### Ricardo Frugolli dos Santos Filho
