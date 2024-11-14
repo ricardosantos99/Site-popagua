@@ -35,7 +35,7 @@ Este é um site com intuito de divulgar a loja, além de um sistema desenvolvido
 
 ---
 
-### Link do video de apresentação do projeto: 
+### Link do video de apresentação do projeto: https://youtu.be/94GLB268N8A
 ### Link da hospedagem: https://comfy-capybara-5a4184.netlify.app/
 ### Link do azure devops: https://dev.azure.com/ricardosantos410/Projeto%20Uni9%20(Pop%20%C3%81gua)
 ---
@@ -43,4 +43,5 @@ Este é um site com intuito de divulgar a loja, além de um sistema desenvolvido
 ### Ricardo Frugolli dos Santos Filho
 ### RA: 3019103085
 ### Ciencia da computaçao - Uninove VP - Noturno
+### Turma: 37
 ### PROJETO EM GESTAO DE SISTEMAS COMPUTACIONAIS
