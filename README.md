@@ -1,7 +1,7 @@
 # 🏪 Projeto Loja Pop Água!
 
 ### 📋 Visão Geral
-Este é um sistema desenvolvido para gerenciar contas a pagar de uma loja de águas, proporcionando aos colaboradores uma interface intuitiva para cadastrar e consultar contas, além de ver o histórico de contas pagas.
+Este é um site com intuito de divulgar a loja, além de um sistema desenvolvido para gerenciar contas a pagar, proporcionando aos colaboradores uma interface intuitiva para cadastrar e consultar contas, além de ver o histórico de contas pagas.
 
 ---
 
